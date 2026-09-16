@@ -1,0 +1,2 @@
+-m 1024 -smp cores=2,threads=1 -cpu core2duo -vga std -device usb-ehci,id=usb -device usb-tablet -display none -vnc 127.0.0.1:1 -rtc base=localtime
+
