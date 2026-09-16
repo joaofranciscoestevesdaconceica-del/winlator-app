@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://android.com"
+    android:layout_width="match_match"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Topo com o Nome do seu App -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qemulator Store"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Barra de Progresso de Download (Fica invisível até o usuário clicar em baixar) -->
+    <LinearLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+        
+        <TextView
+            android:id="@+id/txt_status_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baixando Windows 10 Tiny..."
+            android:textColor="#BBBBBB" />
+            
+        <ProgressBar
+            android:id="@+id/progress_bar_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Lista onde os Containers (Windows, Mac, Linux) vão aparecer -->
+    <ListView
+        android:id="@+id/list_store_containers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#222222"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>
